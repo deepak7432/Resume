@@ -1,212 +1,564 @@
 <!DOCTYPE html>
-<!-- saved from url=(0055)file:///C:/Users/siris/Desktop/Some/WebSite1/index.html -->
-<html class="desktop mbr-site-loaded"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <!-- Site made with Mobirise Website Builder v5.3.10, https://mobirise.com -->
-  
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.3.10, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="./assets/images/1623560441480-modified-128x128.png" type="image/x-icon">
-  <meta name="description" content="Portfolio for Deepak Raghuwanshi ">
-  
-  
-  <title>Deepak Raghuwanshi</title>
-  <link rel="stylesheet" href="./index_files/mobirise2.css">
-  <link rel="stylesheet" href="./index_files/tether.min.css">
-  <link rel="stylesheet" href="./index_files/bootstrap.min.css">
-  <link rel="stylesheet" href="./index_files/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="./index_files/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="./index_files/style.css">
-  <link rel="stylesheet" href="./index_files/styles.css">
-  <link rel="stylesheet" href="./index_files/style(1).css">
-  <link rel="stylesheet" href="./index_files/css" as="style" onload="this.onload=null;this.rel=&#39;stylesheet&#39;">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="./index_files/mbr-additional.css"><link rel="stylesheet" href="./index_files/mbr-additional.css" type="text/css">
-  
-  
-  
-  
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Deepak Raghuwanshi – Lead Cloud DevOps & Site Reliability Engineer (SRE). 8+ years building resilient multi-cloud platforms on AWS & Azure. Open to Staff Engineer and Principal Engineer roles." />
+  <title>Deepak Raghuwanshi | Staff Cloud DevOps & SRE Engineer</title>
+  <!-- Self-contained: no external font CDN needed for static hosting -->
+  <style>
+    /* ─── Reset & Tokens ──────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #0d1117;
+      --surface:     #161b22;
+      --surface2:    #21262d;
+      --border:      #30363d;
+      --accent:      #58a6ff;
+      --accent2:     #3fb950;
+      --accent3:     #d2a8ff;
+      --text:        #e6edf3;
+      --text-muted:  #8b949e;
+      --tag-bg:      #1f2b3d;
+      --tag-border:  #1f6feb;
+      --radius:      8px;
+      --radius-lg:   14px;
+      --shadow:      0 4px 24px rgba(0,0,0,.4);
+      --font-sans:   -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+      --font-mono:   'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--bg); color: var(--text); line-height: 1.65; font-size: 15px; }
+
+    /* ─── Scrollbar ───────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    /* ─── Nav ─────────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(13,17,23,.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .nav-brand { font-size: 1rem; font-weight: 700; color: var(--text); text-decoration: none; letter-spacing: -.2px; }
+    .nav-brand span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--text-muted); text-decoration: none; font-size: .85rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent); color: #0d1117 !important; padding: 6px 14px;
+      border-radius: var(--radius); font-weight: 600 !important; transition: opacity .2s;
+    }
+    .nav-cta:hover { opacity: .85; color: #0d1117 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: .3s; }
+
+    /* ─── Hero ─────────────────────────────────────────── */
+    #hero {
+      min-height: 100vh;
+      padding: 120px 24px 80px;
+      display: flex; align-items: center; justify-content: center;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(88,166,255,.08) 0%, transparent 70%);
+    }
+    .hero-inner { max-width: 860px; width: 100%; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--tag-bg); border: 1px solid var(--tag-border);
+      color: var(--accent); font-size: .78rem; font-weight: 600; letter-spacing: .6px; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 999px; margin-bottom: 28px;
+    }
+    .hero-badge::before { content: ''; display: block; width: 8px; height: 8px; border-radius: 50%; background: var(--accent2); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; line-height: 1.15; letter-spacing: -.5px; margin-bottom: 8px; }
+    h1 span { color: var(--accent); }
+    .hero-title { font-size: clamp(1rem, 2.5vw, 1.3rem); color: var(--accent3); font-weight: 500; margin-bottom: 20px; }
+    .hero-summary { font-size: 1rem; color: var(--text-muted); max-width: 680px; margin-bottom: 36px; line-height: 1.8; }
+    .hero-metrics {
+      display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 40px;
+    }
+    .metric {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 14px 20px;
+    }
+    .metric-value { font-size: 1.6rem; font-weight: 800; color: var(--accent); line-height: 1; }
+    .metric-label { font-size: .75rem; color: var(--text-muted); margin-top: 4px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+    .btn-primary {
+      background: var(--accent); color: #0d1117; padding: 12px 24px; border-radius: var(--radius);
+      font-weight: 700; text-decoration: none; font-size: .9rem; transition: opacity .2s;
+    }
+    .btn-primary:hover { opacity: .85; }
+    .btn-secondary {
+      background: transparent; color: var(--text); padding: 11px 22px; border-radius: var(--radius);
+      border: 1px solid var(--border); font-weight: 600; text-decoration: none; font-size: .9rem;
+      transition: border-color .2s, color .2s;
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+    .social-row { display: flex; gap: 16px; align-items: center; }
+    .social-link { color: var(--text-muted); text-decoration: none; font-size: .85rem; transition: color .2s; }
+    .social-link:hover { color: var(--accent); }
+
+    /* ─── Section Wrapper ─────────────────────────────── */
+    section { padding: 80px 24px; }
+    .section-inner { max-width: 1000px; margin: 0 auto; }
+    .section-label {
+      font-size: .72rem; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 10px;
+    }
+    h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; margin-bottom: 40px; }
+    h2 span { color: var(--text-muted); font-weight: 400; }
+
+    /* ─── Skills Grid ──────────────────────────────────── */
+    #skills { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 20px; }
+    .skill-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 22px; transition: border-color .2s, transform .2s;
+    }
+    .skill-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .skill-card-icon { font-size: 1.5rem; margin-bottom: 10px; }
+    .skill-card h3 { font-size: .9rem; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      font-family: var(--font-mono); font-size: .72rem;
+      background: var(--tag-bg); border: 1px solid var(--tag-border);
+      color: var(--accent); padding: 3px 9px; border-radius: 4px;
+    }
+    .tag.green { background: #1a2f1e; border-color: #2ea043; color: var(--accent2); }
+    .tag.purple { background: #2a1f3d; border-color: #6e40c9; color: var(--accent3); }
+    .tag.orange { background: #2f1f0f; border-color: #d29922; color: #e3b341; }
+
+    /* ─── Experience ────────────────────────────────────── */
+    .timeline { display: flex; flex-direction: column; gap: 32px; }
+    .job-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 28px 30px; position: relative; transition: border-color .2s;
+    }
+    .job-card:hover { border-color: var(--accent); }
+    .job-card::before {
+      content: ''; position: absolute; left: -1px; top: 28px; bottom: 28px;
+      width: 3px; background: var(--accent); border-radius: 0 3px 3px 0;
+      opacity: 0; transition: opacity .2s;
+    }
+    .job-card:hover::before { opacity: 1; }
+    .job-header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+    .job-company { font-size: 1.05rem; font-weight: 700; color: var(--accent); }
+    .job-period { font-size: .8rem; color: var(--text-muted); font-family: var(--font-mono); white-space: nowrap; }
+    .job-title { font-size: .9rem; font-weight: 600; color: var(--accent3); margin-bottom: 16px; }
+    .job-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .job-bullets li {
+      padding-left: 18px; position: relative; font-size: .88rem; color: var(--text-muted); line-height: 1.7;
+    }
+    .job-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--accent2); font-size: .75rem; top: 2px; }
+    .job-bullets strong { color: var(--text); font-weight: 600; }
+    .job-impact {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px;
+    }
+    .impact-pill {
+      background: #0f2a1a; border: 1px solid #2ea043; color: var(--accent2);
+      font-size: .75rem; font-weight: 600; padding: 4px 12px; border-radius: 999px;
+    }
+
+    /* ─── Certifications ────────────────────────────────── */
+    #certs { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
+    .cert-card {
+      background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 24px 22px; text-align: center; transition: border-color .2s, transform .2s;
+    }
+    .cert-card:hover { border-color: var(--accent3); transform: translateY(-2px); }
+    .cert-logo { font-size: 2.2rem; margin-bottom: 12px; }
+    .cert-name { font-size: .88rem; font-weight: 700; margin-bottom: 6px; }
+    .cert-issuer { font-size: .78rem; color: var(--text-muted); }
+    .cert-year { font-size: .72rem; font-family: var(--font-mono); color: var(--accent); margin-top: 8px; }
+
+    /* ─── Education ──────────────────────────────────────── */
+    .edu-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 24px 28px; display: flex; align-items: flex-start; gap: 20px;
+    }
+    .edu-icon { font-size: 2rem; flex-shrink: 0; }
+    .edu-degree { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+    .edu-institution { font-size: .85rem; color: var(--accent); margin-bottom: 4px; }
+    .edu-period { font-size: .78rem; color: var(--text-muted); font-family: var(--font-mono); }
+
+    /* ─── Contact ─────────────────────────────────────────── */
+    #contact { background: radial-gradient(ellipse 60% 50% at 50% 100%, rgba(88,166,255,.07) 0%, transparent 70%); }
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+    .contact-card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 22px; text-align: center; text-decoration: none; color: var(--text);
+      transition: border-color .2s, transform .2s;
+    }
+    .contact-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .contact-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .contact-label { font-size: .72rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 4px; }
+    .contact-value { font-size: .85rem; font-weight: 600; color: var(--accent); word-break: break-all; }
+
+    /* ─── Footer ──────────────────────────────────────────── */
+    footer {
+      text-align: center; padding: 32px 24px; border-top: 1px solid var(--border);
+      color: var(--text-muted); font-size: .8rem;
+    }
+
+    /* ─── Responsive ──────────────────────────────────────── */
+    @media (max-width: 680px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-metrics { gap: 12px; }
+      .metric { padding: 12px 16px; }
+      .job-card { padding: 20px 18px; }
+      .edu-card { flex-direction: column; }
+    }
+
+    /* ─── Utility ─────────────────────────────────────────── */
+    .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
+    .mt-6 { margin-top: 6px; }
+    .mt-20 { margin-top: 20px; }
+  </style>
 </head>
-<body style="z-index: 0"><section id="top-1" style="display: none;"><a href="https://mobirise.in/">Mobirise Review</a> Mobirise v5.3.10</section>
-  
-  <section class="menu cid-s48OLK6784" once="menu" id="menu1-h">
-    
-    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-        <div class="container">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-                    <a href="https://tinyurl.com/DeepakRaghuwanshi">
-                        <img src="./index_files/1623560441480-e-1639612800-v-beta-t-jldokvjapkqzu5-2.svg" alt="Home" style="height: 3.8rem;">
-                    </a>
-                </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7" href="https://tinyurl.com/DeepakRaghuwanshi">Deepak Raghuwanshi</a></span>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="https://tinyurl.com/ResumeofDR" target="_blank">Resume</a></li></ul>
-                <div class="icons-menu">
-                    <a class="iconfont-wrapper" href="https://api.whatsapp.com/send?phone=919425045390&amp;text=Hi%20%20Deepak%20%20:)" target="_blank">
-                        <span><img src="./index_files/whatsapp.png" alt="Whatsapp" width="30px" height="30px"></span>
-                    </a>
-    
-                    <a class="iconfont-wrapper" href="mailto:RAGHUWANSHIDEEPAK79.DR@GMAIL.COM">
-                        <span><img height="30px" width="30px" alt="Mail" src="./index_files/mail.png"></span>
-                    </a>
-    
-                    <a class="iconfont-wrapper" href="https://www.linkedin.com/in/deepakraghuwanshi/" target="_blank">
-                        <span><img src="./index_files/linkedin-logo.png" alt="Linkedin" width="30px" height="30px"></span>
-                    </a>
-    
-                    <a class="iconfont-wrapper" href="https://tinyurl.com/ResumeofDeepak">
-                        <span><img src="./index_files/download-arrow.png" alt="Download" width="30px" height="30px"></span>
-                    </a>
-</div>
-                
-            </div>
-        </div>
-    </nav>
+<body>
 
+<!-- ══════════════════ NAV ══════════════════ -->
+<nav>
+  <a class="nav-brand" href="#hero">Deepak <span>Raghuwanshi</span></a>
+  <ul class="nav-links">
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certs">Certifications</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="Deepak Raghuwanshi.pdf" download class="nav-cta">↓ Resume PDF</a></li>
+  </ul>
+  <div class="hamburger" onclick="this.classList.toggle('open'); document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex';">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Open to Staff / Principal Engineer Roles</div>
+    <h1>Deepak<br /><span>Raghuwanshi</span></h1>
+    <p class="hero-title">Lead Cloud DevOps &amp; Site Reliability Engineer (SRE) &nbsp;·&nbsp; 8+ Years</p>
+    <p class="hero-summary">
+      Accomplished engineer with a proven track record of building resilient, highly-available multi-cloud platforms on
+      <strong style="color:var(--text)">AWS &amp; Azure</strong>. Specializing in
+      <strong style="color:var(--text)">Kubernetes cluster operations</strong>, GitOps, full-stack observability, and
+      DevSecOps — reducing deployment cycle times from 3 hours to 20 minutes and consolidating 700+ pipelines into
+      scalable workflows. Maintained <strong style="color:var(--text)">99.99% service availability</strong> for
+      mission-critical airline systems at Qatar Airways.
+    </p>
+    <div class="hero-metrics">
+      <div class="metric"><div class="metric-value">8+</div><div class="metric-label">Years experience</div></div>
+      <div class="metric"><div class="metric-value">99.99%</div><div class="metric-label">Service availability</div></div>
+      <div class="metric"><div class="metric-value">700+</div><div class="metric-label">Pipelines consolidated</div></div>
+      <div class="metric"><div class="metric-value">35%</div><div class="metric-label">MTTR reduction</div></div>
+      <div class="metric"><div class="metric-value">20%+</div><div class="metric-label">Cloud cost saved</div></div>
+    </div>
+    <div class="hero-actions">
+      <a href="Deepak Raghuwanshi.pdf" download class="btn-primary">↓ Download Resume</a>
+      <a href="#experience" class="btn-secondary">View Experience →</a>
+    </div>
+    <div class="social-row mt-20">
+      <a href="https://www.linkedin.com/in/deepakraghuwanshi/" target="_blank" class="social-link">🔗 LinkedIn</a>
+      <a href="mailto:raghuwanshideepak79.dr@gmail.com" class="social-link">✉️ Email</a>
+      <a href="https://api.whatsapp.com/send?phone=919425045390" target="_blank" class="social-link">💬 WhatsApp</a>
+    </div>
+  </div>
 </section>
 
-<section class="header1 cid-s48MCQYojq" id="header1-f">
+<hr class="divider" />
 
-    
+<!-- ══════════════════ SKILLS ══════════════════ -->
+<section id="skills">
+  <div class="section-inner">
+    <p class="section-label">Core Competencies</p>
+    <h2>Technical Skills <span>&amp; Expertise</span></h2>
+    <div class="skills-grid">
 
-    
-
-    <div class="align-center container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>Deepak Raghuwanshi</strong></h1>
-                
-                <p class="mbr-text mbr-fonts-style display-7">3.5+ Years of IT Experience as DevOps | Infrastructure | Process Automation Engineer. <br>Experience in designing the CI | CD process including Configuration Management, Server configuration, Continuous Integration, managing Release cycles under a variety of technologies.<br>
-
-
-
-</p>
-    
-    
-                
-            </div>
+      <div class="skill-card">
+        <div class="skill-card-icon">☁️</div>
+        <h3>Cloud &amp; Multi-Cloud Infrastructure</h3>
+        <div class="tags">
+          <span class="tag">AWS EKS</span><span class="tag">AWS EC2</span><span class="tag">S3</span>
+          <span class="tag">IAM</span><span class="tag">CloudWatch</span><span class="tag">VPC</span>
+          <span class="tag">Azure AKS</span><span class="tag">Key Vault</span><span class="tag">VNet</span>
+          <span class="tag">Blob Storage</span><span class="tag">FinOps</span>
         </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">🚢</div>
+        <h3>Containers &amp; Platform Engineering</h3>
+        <div class="tags">
+          <span class="tag green">Kubernetes</span><span class="tag green">Docker</span>
+          <span class="tag green">Helm 3</span><span class="tag green">KEDA</span>
+          <span class="tag green">OpenShift (ARO)</span><span class="tag green">NGINX</span>
+          <span class="tag green">Traefik</span><span class="tag green">Cluster Autoscaling</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">📡</div>
+        <h3>Observability &amp; SRE</h3>
+        <div class="tags">
+          <span class="tag purple">Prometheus</span><span class="tag purple">Grafana</span>
+          <span class="tag purple">Datadog</span><span class="tag purple">Dynatrace</span>
+          <span class="tag purple">Azure Monitor</span><span class="tag purple">OpenTelemetry</span>
+          <span class="tag purple">SLI/SLO/SLA</span><span class="tag purple">Error Budgets</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">🔄</div>
+        <h3>CI/CD &amp; GitOps</h3>
+        <div class="tags">
+          <span class="tag orange">ArgoCD</span><span class="tag orange">Flux</span>
+          <span class="tag orange">Azure DevOps</span><span class="tag orange">Jenkins</span>
+          <span class="tag orange">GitHub Actions</span><span class="tag orange">GitLab CI</span>
+          <span class="tag orange">JFrog Artifactory</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">🏗️</div>
+        <h3>Infrastructure as Code &amp; Scripting</h3>
+        <div class="tags">
+          <span class="tag">Terraform</span><span class="tag">ARM / Bicep</span>
+          <span class="tag">Python</span><span class="tag">Bash</span>
+          <span class="tag">PowerShell</span><span class="tag">Ansible</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card-icon">🔐</div>
+        <h3>DevSecOps &amp; Compliance</h3>
+        <div class="tags">
+          <span class="tag green">SonarQube</span><span class="tag green">JFrog Xray</span>
+          <span class="tag green">Trivy</span><span class="tag green">SAST / DAST</span>
+          <span class="tag green">SCA</span><span class="tag green">HashiCorp Vault</span>
+          <span class="tag green">RBAC</span><span class="tag green">Zero Trust</span>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
 
-<section class="content1 cid-s48udlf8KU" id="content1-8">
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="title col-12 col-md-9">
-                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Experience&nbsp;Summary</strong></h3>
-                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7"><div>A Passionate technical professional and contributor, specializing in DevOps | Cloud Automation and integration, with a unique creative ability to map the needs of the business to the technology. Over 3+ years of DevOps and Infrastructure engineering. </div><br><div>Experienced with PowerShell, Terraform,&nbsp; Ansible, Python, GIT, Jenkins &amp; other automation tools, as well as experience designing and integrating both private and public cloud solutions.</div><br><div><span style="font-size: 1.2rem;">Hands on experience working with Version Control tool GIT to perform various task such as create and edit Repos and Assigning access parameter to users, Branching repositories depending upon project requirements, generating logs and reviewing changes.</span><br></div><br><div><span style="font-size: 1.2rem;">Experience in source code management by performing multiple operations on GitLab and repository Servers. Managed projects and individual repositories of each project created multiple repositories, Edited roles and permissions for users based on projects and repositories access protocols, also expert in decommissioning repositories when the project lifecycle comes to an end. </span></div><br><div><span style="font-size: 1.2rem;">Experience with Amazon web Service exposure to Azure Cloud Platform • Experience in handling tickets using ServiceNow, implementing disaster recover, Logging in Change management, Incident management and solving the tickets based on SLA timeline, detailed log of implementations in the architecture using ServiceNow tickets.</span></div></h4>
-                
-            </div>
+<!-- ══════════════════ EXPERIENCE ══════════════════ -->
+<section id="experience">
+  <div class="section-inner">
+    <p class="section-label">Career History</p>
+    <h2>Professional <span>Experience</span></h2>
+    <div class="timeline">
+
+      <!-- Qatar Airways -->
+      <div class="job-card">
+        <div class="job-header">
+          <span class="job-company">Qatar Airways</span>
+          <span class="job-period">Feb 2025 – Present</span>
         </div>
+        <p class="job-title">DevOps Lead – Multi-Cloud &amp; SRE Operations</p>
+        <ul class="job-bullets">
+          <li><strong>Internal Developer Platform &amp; Central CI/CD:</strong> Architected enterprise-grade, reusable CI/CD pipeline templates adopted across development squads, standardizing release workflows and eliminating redundant configuration overhead across hundreds of repositories.</li>
+          <li><strong>OpenShift &amp; GitOps Container Operations:</strong> Containerized legacy and modern .NET microservices via optimized Docker multi-stage builds, designing an automated container image promotion lifecycle and GitOps deployment model targeting Azure Red Hat OpenShift (ARO).</li>
+          <li><strong>Hierarchical Helm &amp; Terraform Secrets Integration:</strong> Automated multi-tier Helm chart configurations segregating variables into global, shared, and service-specific tiers; dynamically synchronizing values via External Secrets Operator (ESO).</li>
+          <li><strong>Enterprise DevSecOps &amp; Governance:</strong> Instituted automated SAST/SCA security scans, branch protection policies, mandatory PR reviews, and build validation gates directly into core pipelines to enforce zero-trust pre-merge compliance.</li>
+          <li><strong>State-Based Database Delivery:</strong> Engineered declarative "Build &amp; Apply" schema migration pipelines, eliminating manual SQL rollout bottlenecks and deployment rollbacks.</li>
+          <li><strong>Mobile CI/CD Infrastructure:</strong> Designed and deployed automated continuous delivery for iOS (.ipa) and Android (.apk) applications including build packaging, code signing, and distribution.</li>
+          <li><strong>Operational Telemetry &amp; Alerting:</strong> Built end-to-end audit and health automation pipelines generating dynamic HTML/CSV compliance dashboards and real-time alerts for deployment failures, security policy breaches, and availability.</li>
+        </ul>
+        <div class="job-impact">
+          <span class="impact-pill">Airline-scale SRE</span>
+          <span class="impact-pill">ARO / OpenShift</span>
+          <span class="impact-pill">GitOps</span>
+          <span class="impact-pill">Zero Trust</span>
+        </div>
+      </div>
+
+      <!-- Roche -->
+      <div class="job-card">
+        <div class="job-header">
+          <span class="job-company">Roche Information Solutions</span>
+          <span class="job-period">Nov 2022 – Jan 2025</span>
+        </div>
+        <p class="job-title">DevOps Engineer – Cloud &amp; Platform Reliability</p>
+        <ul class="job-bullets">
+          <li><strong>Release Modernization:</strong> Consolidated 700+ pipelines across 11 environments into 64 multi-stage YAML pipelines; introduced one-click deployments, slashing release cycles from <strong>1 month → 1 day</strong>.</li>
+          <li><strong>Kubernetes &amp; Microservices Reliability:</strong> Managed multi-cloud AKS/EKS clusters hosting critical microservices; implemented automated health probes, pod autoscaling, and centralized ConfigMap/Secret management — <strong>99.9%+ runtime reliability</strong>.</li>
+          <li><strong>Infrastructure as Code:</strong> Centralized multi-environment provisioning with modular Terraform codebases and remote state locking, preventing configuration drift across cloud environments.</li>
+          <li><strong>DevSecOps &amp; Quality Assurance:</strong> Embedded SAST, SCA, and JFrog Xray scans into pipelines; enforced branch policies, PR reviews, and automated build validations to prevent pre-release vulnerabilities.</li>
+          <li><strong>FinOps &amp; Resource Optimization:</strong> Deployed automated telemetry for Kubernetes CPU/memory rightsizing, lowering compute waste by <strong>20%+</strong>.</li>
+          <li><strong>SRE Observability:</strong> Instituted enterprise observability with Azure Monitor, Prometheus, and Grafana tracking SRE Golden Signals; wired self-healing runbooks cutting MTTR by <strong>~35%</strong>.</li>
+        </ul>
+        <div class="job-impact">
+          <span class="impact-pill">700+ → 64 Pipelines</span>
+          <span class="impact-pill">35% MTTR ↓</span>
+          <span class="impact-pill">20%+ Cost Savings</span>
+          <span class="impact-pill">99.9% Uptime</span>
+        </div>
+      </div>
+
+      <!-- Tietoevry -->
+      <div class="job-card">
+        <div class="job-header">
+          <span class="job-company">Tietoevry</span>
+          <span class="job-period">Nov 2021 – Nov 2022</span>
+        </div>
+        <p class="job-title">Senior Platform Engineer – Cloud DevOps</p>
+        <ul class="job-bullets">
+          <li>Engineered automated provisioning frameworks for on-premises and Azure cloud using Terraform, Azure DevOps YAML pipelines, and PowerShell/Python scripts.</li>
+          <li>Automated enterprise secret lifecycle and SSL/TLS certificate rotation via Azure Key Vault, eliminating credential drift and service outages from expired certificates.</li>
+          <li>Orchestrated production triage for infrastructure incidents across Azure App Services, Function Apps, self-hosted build VM pools, and IAM configurations.</li>
+          <li>Designed modular Terraform codebases with remote state locking and reusable modules, enforcing consistent multi-region infrastructure environments.</li>
+          <li>Partnered with engineering leads to establish microservice design patterns, standardized container health probes (liveness/readiness), and automated rollback mechanisms.</li>
+        </ul>
+        <div class="job-impact">
+          <span class="impact-pill">Azure Key Vault</span>
+          <span class="impact-pill">IaC Modularization</span>
+          <span class="impact-pill">Incident Response</span>
+        </div>
+      </div>
+
+      <!-- Wipro -->
+      <div class="job-card">
+        <div class="job-header">
+          <span class="job-company">Wipro</span>
+          <span class="job-period">Jul 2018 – Nov 2021</span>
+        </div>
+        <p class="job-title">Infrastructure Process Automation &amp; Cloud DevOps Engineer</p>
+        <ul class="job-bullets">
+          <li>🏆 Received <strong>Best Performance in Automation Award</strong> for eliminating manual operational overhead across enterprise hybrid environments.</li>
+          <li>Automated server administration, vulnerability patching, and compute provisioning across AWS, Azure, and VMware using PowerShell, Bash, and Terraform.</li>
+          <li>Implemented automated health-check routines, disk volume expansion scripts, and failover monitoring with custom alerting pipelines.</li>
+          <li>Integrated SonarQube and JFrog scanners into Jenkins and Azure DevOps CI pipelines to enforce quality gates across build stages.</li>
+          <li>Built automated reporting tools consolidating metrics from ServiceNow, monitoring logs, and infrastructure repositories into executive operational dashboards.</li>
+        </ul>
+        <div class="job-impact">
+          <span class="impact-pill">🏆 Best Automation Award</span>
+          <span class="impact-pill">AWS + Azure + VMware</span>
+          <span class="impact-pill">ServiceNow Automation</span>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
 
-<section class="content8 cid-sFA0KXL9tc" id="content8-o">
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="counter-container col-md-12 col-lg-10">
-                <h4 class="mbr-section-title mbr-fonts-style mb-4 display-5">Skill Set</h4>
-                <div class="mbr-text mbr-fonts-style display-7">
-                    <ul>
-                        <li><strong>Infrastructure as Code - Terraform</strong></li>
-                        <li><strong>Cloud - AWS, Azure Cloud&nbsp;</strong></li><li><strong>Scripting - PowerShell, Python, PHP</strong></li><li><strong>DevOps -&nbsp; Azure DevOps |&nbsp;</strong><strong>Jenkins, Ansible, Docker, Kubernetes</strong></li><li><strong>Other - YAML, XML, JSON, HTML, CSS, JavaScript</strong></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<!-- ══════════════════ CERTIFICATIONS ══════════════════ -->
+<section id="certs">
+  <div class="section-inner">
+    <p class="section-label">Verified Credentials</p>
+    <h2>Certifications</h2>
+    <div class="cert-grid">
+
+      <div class="cert-card">
+        <div class="cert-logo">🏅</div>
+        <div class="cert-name">Certified SAFe® 6 DevOps Practitioner</div>
+        <div class="cert-issuer">Scaled Agile Inc.</div>
+        <div class="cert-year">2025</div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-logo">🏅</div>
+        <div class="cert-name">HashiCorp Certified: Terraform Associate</div>
+        <div class="cert-issuer">HashiCorp</div>
+        <div class="cert-year">2021</div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-logo">☁️</div>
+        <div class="cert-name">AWS Certified Cloud Practitioner</div>
+        <div class="cert-issuer">Amazon Web Services</div>
+        <div class="cert-year">Certified</div>
+      </div>
+
+      <div class="cert-card">
+        <div class="cert-logo">🪟</div>
+        <div class="cert-name">Microsoft Certified Professional</div>
+        <div class="cert-issuer">Microsoft</div>
+        <div class="cert-year">Certified</div>
+      </div>
+
     </div>
+  </div>
 </section>
 
-<section class="content9 cid-sFA1Wz2s9J" id="content9-q">
-    
-
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="counter-container col-md-12 col-lg-10">
-                <h4 class="mbr-section-title mbr-fonts-style mb-4 display-5">Responsibilities handled</h4>
-                <div class="mbr-text mbr-fonts-style display-7">
-                    <ol>
-                        <li><strong>Collecting and understanding requirements by syncing with client.
-</strong></li><li><strong>Analyzing the Standard Operating Procedure shared by client.
-</strong></li><li><strong>Designing Logic &amp; workflow for the solution &amp; start development.
-</strong></li><li><strong>Presented &amp; Explained Design Documents to client for Approval.
-</strong></li><li><strong>Developed Solution for Server Administrative Activities like Monitoring Performance, Health Checks, Vulnerability Fixes, Certificate Management, Azure-AD &amp; Active Directory, 0365, Exchange, Pre &amp; Post Checks Patch, Task scheduling and background job processing etc.
-</strong></li><li><strong>Developed &amp; Implemented Solution for Creating &amp; Managing Workspace, Virtual Marching on AWS, Azure &amp; VM Ware as per business requirements.
-</strong></li><li><strong>Developed Solutions for reporting, Processing &amp; Consolidating data from Various sources service-now or data Repository to one master report with Custom Dashboard in Excel or HTML based reports.
-</strong></li><li><strong>Expert with Exception &amp; Error Handling while Maintaining readable but detailed Error Logs for Quick Debugging &amp; troubleshooting.
-</strong></li><li><strong>Experience in provisioning Dev &amp; Test Environment on Azure and AWS using Terraform &amp; Configuration with ansible.
-</strong></li><li><strong>Experience in Source code management by performing multiple operations on GitLab and Repository Servers. Managed projects and Individual repositories of each project created multiple repos, Edited roles and permission for users based on access protocols.
-</strong></li><li><strong>Experience in creating pipelines on Azure DevOps &amp; Jenkins.
-</strong></li><li><strong>Experience with Automation testing with selenium web driver.
-</strong></li><li><strong>Hands on Experience in Containerization Environments with Docker and orchestrator with Kubernetes.
-</strong></li><li><strong>knowledge on Quality and Analysis with SonarQube &amp; JFrog.</strong></li>
-                    </ol>
-                </div>
-            </div>
-        </div>
+<!-- ══════════════════ EDUCATION ══════════════════ -->
+<section id="education">
+  <div class="section-inner">
+    <p class="section-label">Academic Background</p>
+    <h2>Education</h2>
+    <div class="edu-card">
+      <div class="edu-icon">🎓</div>
+      <div>
+        <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
+        <div class="edu-institution">Amity University, Gwalior</div>
+        <div class="edu-period">2015 – 2018</div>
+        <p class="mt-6" style="font-size:.85rem;color:var(--text-muted);margin-top:8px;">
+          Minor Specialization in Animation &nbsp;·&nbsp; Amity University, Gwalior (2018)
+        </p>
+      </div>
     </div>
+  </div>
 </section>
 
-<section class="content1 cid-sFA2pXXGGl" id="content1-r">
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="title col-12 col-md-9">
-                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Educational Summary</strong></h3>
-                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Bachelors Computer Applications from Amity University | Gwalior 2015 – 2018<br></h4>
-                
-            </div>
-        </div>
+<!-- ══════════════════ CONTACT ══════════════════ -->
+<section id="contact">
+  <div class="section-inner">
+    <p class="section-label">Let's Connect</p>
+    <h2>Contact <span>Me</span></h2>
+    <div class="contact-grid">
+      <a href="mailto:raghuwanshideepak79.dr@gmail.com" class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value">raghuwanshideepak79.dr@gmail.com</div>
+      </a>
+      <a href="tel:+919425045390" class="contact-card">
+        <div class="contact-icon">📞</div>
+        <div class="contact-label">Phone</div>
+        <div class="contact-value">+91-9425045390</div>
+      </a>
+      <a href="https://www.linkedin.com/in/deepakraghuwanshi/" target="_blank" class="contact-card">
+        <div class="contact-icon">🔗</div>
+        <div class="contact-label">LinkedIn</div>
+        <div class="contact-value">linkedin.com/in/deepakraghuwanshi</div>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=919425045390" target="_blank" class="contact-card">
+        <div class="contact-icon">💬</div>
+        <div class="contact-label">WhatsApp</div>
+        <div class="contact-value">+91-9425045390</div>
+      </a>
+      <a href="Deepak Raghuwanshi.pdf" download class="contact-card">
+        <div class="contact-icon">📄</div>
+        <div class="contact-label">Resume</div>
+        <div class="contact-value">Download PDF</div>
+      </a>
+      <div class="contact-card" style="cursor:default">
+        <div class="contact-icon">📍</div>
+        <div class="contact-label">Location</div>
+        <div class="contact-value">Ahmedabad, India</div>
+      </div>
     </div>
+  </div>
 </section>
 
-<section class="content1 cid-sFA30c0KIP" id="content1-s">
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="title col-12 col-md-9">
-                <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Personal Details</strong></h3>
-                <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7"><strong>My name is Deepak Raghuwanshi, </strong><br><div>
-</div><div><span style="font-size: 1.2rem;">I am looking for an organization, where I can use my skills &amp; knowledge for the growth of the organization.&nbsp;</span><span style="font-size: 1.2rem;">I belong to Madhya Pradesh, Ashok Nagar a small &amp; peacefull Town, I love to discover more about the world</span></div><div><span style="font-size: 1.2rem;"><br></span></div><div><span style="font-size: 1.2rem;">Let's discuss more in Virtual Connect with real taste of coffee.</span><br></div><div>
-</div><div>
-</div></h4>
-                
-            </div>
-        </div>
-    </div>
-</section>
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer>
+  <p>© 2026 Deepak Raghuwanshi &nbsp;·&nbsp; Lead Cloud DevOps &amp; SRE Engineer &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/in/deepakraghuwanshi/" target="_blank" style="color:var(--accent);text-decoration:none;">LinkedIn</a>
+    &nbsp;·&nbsp; Ahmedabad, India
+  </p>
+  <p style="margin-top:6px; color:#484f58">Open to Staff Engineer, Principal Engineer &amp; SRE Leadership opportunities worldwide</p>
+</footer>
 
-<section class="footer7 cid-sLuYycWKwx" once="footers" id="footer7-u">
-
-    
-
-    
-
-    <div class="container">
-        <div class="media-container-row align-center mbr-white">
-            <div class="col-12">
-                <span style="font-size:10px">Thanks to - Mobirise | Github | Flaticons</span>
-<p class="mbr-text mb-0 mbr-fonts-style display-7"><strong>Reach me on  <a href="https://www.linkedin.com/in/deepakraghuwanshi/" class="text-primary" target="_blank">Linked In</a> | Email - <a href="mailto:RAGHUWANSHIDEEPAK79.DR@GMAIL.COM" class="text-primary">RAGHUWANSHIDEEPAK79.DR@GMAIL.COM</a> |&nbsp; Thanks for your consideration</strong>
-<br>
-</p>
-<p></p>
-            </div>
-        </div>
-    </div>
-</section><section style="display: none;"><a href="https://mobirise.site/f" style="display: none;"></a><p style="flex: 0 0 auto; margin:0; padding-right:1rem;">Build a free website - <a href="https://mobirise.site/v" style="display: none;">Go here</a></p></section><script src="./index_files/jquery.min.js.download"></script>  <script src="./index_files/popper.min.js.download"></script>  <script src="./index_files/tether.min.js.download"></script>  <script src="./index_files/bootstrap.min.js.download"></script>  <script src="./index_files/smooth-scroll.js.download"></script>  <script src="./index_files/nav-dropdown.js.download"></script>  <script src="./index_files/navbar-dropdown.js.download"></script>  <script src="./index_files/jquery.touch-swipe.min.js.download"></script>  <script src="./index_files/script.js.download"></script>  
-  
-  
-
-</body></html>
+</body>
+</html>

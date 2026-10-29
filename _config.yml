@@ -1,0 +1,27 @@
+# GitHub Pages configuration
+# Repo: https://github.com/deepak7432/Resume
+# Site will be live at: https://deepak7432.github.io/Resume/
+
+title: "Deepak Raghuwanshi | Staff Cloud DevOps & SRE Engineer"
+description: "Lead Cloud DevOps & Site Reliability Engineer with 8+ years building resilient multi-cloud platforms. Open to Staff Engineer, Principal Engineer & SRE Leadership roles."
+url: "https://deepak7432.github.io"
+baseurl: "/Resume"
+
+# Exclude source files from the built site
+exclude:
+  - Remote_update.sh
+  - .Remote_update.sh.swp
+  - readme.MD
+  - LICENSE
+  - .vs/
+  - "*.docx"
+  - Gemfile
+  - Gemfile.lock
+
+# Serve index.html at root
+include:
+  - index.html
+  - 404.html
+
+# Disable Jekyll processing of the HTML (we handle it ourselves)
+plugins: []
